@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USA to India Time Converter</title>
+    <link rel="stylesheet" href="timezone-style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <h1 class="nav-title">Time Zone Converter</h1>
+        </div>
+        <div class="nav-right">
+            <a href="https://www.linkedin.com/in/purushothamanofficial/" target="_blank" class="profile-link">
+                <div class="ninja-avatar">🥷</div>
+                <span class="profile-name">Purushothama N</span>
+            </a>
+        </div>
+    </nav>
+    
+    <div class="main-container">
+        
+        <div class="four-column-layout">
+            <!-- Column 1: Converter -->
+            <div class="column converter-column">
+                <h2>Time Converter</h2>
+                
+                <!-- Conversion Direction Toggle -->
+                <div class="toggle-section">
+                    <button id="toggleDirection" class="toggle-btn">Switch to India → USA</button>
+                </div>
+                
+                <div class="converter-section">
+                    <!-- USA to India Converter -->
+                    <div id="usaToIndia" class="conversion-mode">
+                        <div class="input-group">
+                            <label for="usaDateTime">USA Date & Time:</label>
+                            <input type="datetime-local" id="usaDateTime">
+                            <select id="usaTimezone">
+                                <option value="America/New_York">Eastern Time (ET)</option>
+                                <option value="America/Chicago">Central Time (CT)</option>
+                                <option value="America/Denver">Mountain Time (MT)</option>
+                                <option value="America/Los_Angeles">Pacific Time (PT)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="arrow">⬇️</div>
+                        
+                        <div class="result-group">
+                            <label>India Date & Time:</label>
+                            <div id="indiaDateTime" class="result-display">Select USA time above</div>
+                            <div class="timezone-label">India Standard Time (IST)</div>
+                        </div>
+                    </div>
+                    
+                    <!-- India to USA Converter -->
+                    <div id="indiaToUsa" class="conversion-mode" style="display: none;">
+                        <div class="input-group">
+                            <label for="indiaDateTime2">India Date & Time:</label>
+                            <input type="datetime-local" id="indiaDateTime2">
+                            <div class="timezone-label">India Standard Time (IST)</div>
+                        </div>
+                        
+                        <div class="arrow">⬇️</div>
+                        
+                        <div class="result-group">
+                            <label>USA Date & Time:</label>
+                            <select id="targetUsaTimezone">
+                                <option value="America/New_York">Eastern Time (ET)</option>
+                                <option value="America/Chicago">Central Time (CT)</option>
+                                <option value="America/Denver">Mountain Time (MT)</option>
+                                <option value="America/Los_Angeles">Pacific Time (PT)</option>
+                            </select>
+                            <div id="usaDateTime2" class="result-display">Select India time above</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="current-time-section">
+                    <h3>Current Time</h3>
+                    <div class="time-display">
+                        <div class="time-box">
+                            <h4>USA (Eastern)</h4>
+                            <div id="currentUSA"></div>
+                        </div>
+                        <div class="time-box">
+                            <h4>India</h4>
+                            <div id="currentIndia"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Column 2: All 50 States Times -->
+            <div class="column states-column">
+                <h2>All US States Current Time</h2>
+                <div id="statesTimeList" class="states-list"></div>
+            </div>
+            
+            <!-- Column 3: USA Calendar & Holidays -->
+            <div class="column calendar-column">
+                <h2>USA Calendar & Holidays</h2>
+                <div class="calendar-container">
+                    <div class="calendar-header">
+                        <button id="prevMonth">‹</button>
+                        <span id="currentMonth"></span>
+                        <button id="nextMonth">›</button>
+                    </div>
+                    <div id="usaCalendar" class="calendar"></div>
+                    <div class="holidays-section">
+                        <h3>USA Holidays 2025</h3>
+                        <div id="usaHolidays" class="holidays-list"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Column 4: India Calendar & Holidays -->
+            <div class="column calendar-column">
+                <h2>India Calendar & Holidays</h2>
+                <div class="calendar-container">
+                    <div class="calendar-header">
+                        <button id="prevMonthIndia">‹</button>
+                        <span id="currentMonthIndia"></span>
+                        <button id="nextMonthIndia">›</button>
+                    </div>
+                    <div id="indiaCalendar" class="calendar"></div>
+                    <div class="holidays-section">
+                        <h3>India Holidays 2025</h3>
+                        <div id="indiaHolidays" class="holidays-list"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Copyright Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Purushothama. All rights reserved.</p>
+    </footer>
+    
+    <script src="timezone-script.js"></script>
+</body>
+</html>
